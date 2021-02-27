@@ -1,20 +1,47 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+   <ion-item style="color: aliceblue;">
+     Twitch mix
+   </ion-item>
+
+
+    <ion-item lines="none">
+      <ion-avatar slot="start">
+        <img src="https://media.newyorker.com/photos/5ad6313540fc7c73d830a3a8/1:1/w_3004,h_3004,c_limit/St-Felix-Kendrick-Lamar-Pulitzer.jpg">
+      </ion-avatar>
+      <ion-label>
+        <h1>kendrick </h1>
+      </ion-label>
+    </ion-item>
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+
+  <ion-list>
+
+
+
+    <span *ngFor="let item of tabela" >
+
+      <ion-title>
+         {{item.titulo}}
+        </ion-title>
+      <ion-item lines='none'>
+
+        <ion-progress-bar [value]="calcularPorcentagem(item.porcentagem)" [color]="calcular(item.porcentagem)"></ion-progress-bar>
+
+        <div class="info">
+          {{item.porcentagem}}
+        </div>
+
+      </ion-item>
+    </span>
+
+
+
+  </ion-list>
+
 </ion-content>
