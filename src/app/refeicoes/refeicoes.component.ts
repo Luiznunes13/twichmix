@@ -7,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RefeicoesComponent implements OnInit {
 
+  public search: string = '' ;
+
   constructor() { }
 
   ngOnInit() {}
-
+  searchChanged(){
+    console.log(this.search);
+  }
 }

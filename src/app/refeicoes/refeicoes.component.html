@@ -1,3 +1,21 @@
-<p>
-  sucrilhos works!
-</p>
+<ion-content>
+
+
+<ion-item>
+  <ion-label position="floating">Alimentos</ion-label>
+  <ion-input></ion-input>
+</ion-item>
+<div>
+  <ion-searchbar [(ngModel)]="search"(ion-Change)="searchChanged()" placeholder="O que vc almoçou"></ion-searchbar>
+</div>
+<ion-button 
+  shape="round" 
+  fill="outline" 
+  color="success" 
+  
+  size="small"
+  >Enviar
+  
+</ion-button>
+
+</ion-content>

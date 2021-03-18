@@ -1,6 +1,7 @@
 import { RefeicoesComponent } from './refeicoes/refeicoes.component';
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { CadastroComponent } from './cadastro/cadastro.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,9 @@ const routes: Routes = [
   },
   {
     path: 'refeicoes', component: RefeicoesComponent
+  },
+  {
+    path: 'cadastro', component: CadastroComponent
   },
 ];
 
